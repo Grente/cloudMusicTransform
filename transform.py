@@ -16,7 +16,8 @@ class Transform():
         try:
             self.uc_path = self.config.get('缓冲路径', 'UC_PATH')
             self.mp3_path = self.config.get('MP3生成文件路径', 'MP3_PATH')
-        except:
+        except Exception as e:
+            raise Warning(str(e))
             print('请检查配置文件config.ini变量 UC_PATH MP3_PATH')
             return False
 
@@ -71,7 +72,8 @@ class Transform():
             song_name = jsons['songs'][0]['name']
             singer = jsons['songs'][0]['ar'][0]['name']
             return song_name, singer
-        except:
+        except Exception as e:
+            raise Warning(str(e))
             return str(song_id), ''
 
 if __name__ == '__main__':
