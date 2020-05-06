@@ -4,8 +4,8 @@
 
 使用方法：  
 
-1、配置config.ini文件配置缓存路径UC_PATH，音乐文件生成路径MP3_PATH（用笔记本大开间就行）  
-2、运行transform.py  （输入命令 python transfrom.py）  
+1、编辑config.ini文件配置缓存路径UC_PATH，音乐文件生成路径MP3_PATH（用笔记本编辑就行）  
+2、运行transform.py  （cmd命令行输入命令 python transfrom.py）  
 
 转换流程:  
 
