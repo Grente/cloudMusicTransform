@@ -18,8 +18,14 @@ class Transform():
             self.config.read('config.ini')
             self.uc_path = self.config.get('缓冲路径', 'UC_PATH')
             self.mp3_path = self.config.get('MP3生成文件路径', 'MP3_PATH')
+<<<<<<< HEAD
         except:
             print('请检查配置文件config.ini')
+=======
+        except Exception as e:
+            raise Warning(str(e))
+            print('请检查配置文件config.ini变量 UC_PATH MP3_PATH')
+>>>>>>> 3b3cef9a921a0e27f8bd1cd3a6b154fa885474ea
             return False
 
         if not os.path.exists(self.uc_path):
@@ -78,7 +84,8 @@ class Transform():
             song_name = jsons['songs'][0]['name']
             singer = jsons['songs'][0]['ar'][0]['name']
             return song_name, singer
-        except:
+        except Exception as e:
+            raise Warning(str(e))
             return str(song_id), ''
 
 
