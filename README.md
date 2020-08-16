@@ -4,7 +4,7 @@ aiohttp==3.6.2
 aiofiles==0.5.0  
 
 使用方法：  
-1、编辑config.ini文件配置缓存路径UC_PATH，音乐文件生成路径MP3_PATH（用笔记本编辑就行）  
+1、编辑config.py文件配置缓存路径UC_PATH，音乐文件生成路径MP3_PATH（用笔记本编辑就行）  
 2、运行transform.py  （cmd命令行输入命令 python transfrom.py） 
 
 转换流程:  
@@ -15,3 +15,8 @@ aiofiles==0.5.0
 ****
 2020--6-20  支持并发操作
 
+****
+2020--8-16
+增加例子
+如果安装异步网络模块麻烦，可参考只需requests模块版本
+参考：https://blog.csdn.net/haha1fan/article/details/104464221

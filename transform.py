@@ -6,21 +6,20 @@ import configparser
 import asyncio
 import aiohttp
 import aiofiles
+import config
 
 class Transform():
     def __init__(self):
-        self.config = configparser.ConfigParser()
         self.uc_path = ''
         self.mp3_path = ''
         self.id2file = {}  # {mp3 ID: file name}
 
     def check_config(self):
         try:
-            self.config.read('config.ini')
-            self.uc_path = self.config.get('缓冲路径', 'UC_PATH')
-            self.mp3_path = self.config.get('MP3生成文件路径', 'MP3_PATH')
+            self.uc_path = config.UC_PATH
+            self.mp3_path = config.MP3_PATH
         except Exception as e:
-            print('Warning {} 请检查配置文件config.ini变量 UC_PATH MP3_PATH'.format(str(e)))
+            print('Warning {} 请检查配置文件config.py变量 UC_PATH MP3_PATH'.format(str(e)))
             return False
 
         if not os.path.exists(self.uc_path):
