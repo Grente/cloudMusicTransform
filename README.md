@@ -20,3 +20,9 @@ aiofiles==0.5.0
 增加例子
 如果安装异步网络模块麻烦，可参考只需requests模块版本
 参考：https://blog.csdn.net/haha1fan/article/details/104464221
+
+****
+2022--12-30
+更新获取歌曲信息接口，用
+RUL = 'http://music.163.com/api/song/detail/?id={0}&ids=%5B{1}%5D'.format(song_id, song_id)
+例子：http://music.163.com/api/song/detail/?id=1347203552&ids=%5B1347203552%5D
