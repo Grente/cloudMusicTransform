@@ -73,12 +73,13 @@ class Transform():
 
     async def get_song_info(self, song_id):
         try:
-            url = 'https://api.imjad.cn/cloudmusic/?type=detail&id={}'.format(song_id)  # 请求url例子：https://api.imjad.cn/cloudmusic/?type=detail&id=1347203552
+            # url = 'https://api.imjad.cn/cloudmusic/?type=detail&id={}'.format(song_id)  # 请求url例子：https://api.imjad.cn/cloudmusic/?type=detail&id=1347203552
+            url = 'http://music.163.com/api/song/detail/?id={0}&ids=%5B{1}%5D'.format(song_id, song_id)  # 请求url例子：http://music.163.com/api/song/detail/?id=1347203552&ids=%5B1347203552%5D
             async with aiohttp.ClientSession() as session:
                 async with session.get(url) as response:
                     jsons = await response.json()
                     song_name = jsons['songs'][0]['name']
-                    singer = jsons['songs'][0]['ar'][0]['name']
+                    singer = jsons['songs'][0]['artists'][0]['name']
                     return song_name, singer
         except Exception as e:
             print("Warning Song Info", Warning(str(e)))
