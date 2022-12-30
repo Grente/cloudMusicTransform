@@ -24,5 +24,5 @@ aiofiles==0.5.0
 ****
 2022--12-30
 更新获取歌曲信息接口，用
-RUL = 'http://music.163.com/api/song/detail/?id={0}&ids=%5B{1}%5D'.format(song_id, song_id)
-例子：http://music.163.com/api/song/detail/?id=1347203552&ids=%5B1347203552%5D
+RUL = 'http://music.163.com/api/song/detail/?id={0}&ids=%5B{1}%5D'.format(song_id, song_id)  
+例子：http://music.163.com/api/song/detail/?id=1347203552&ids=%5B1347203552%5D  
