@@ -18,7 +18,7 @@ aiofiles==0.5.0
 ****
 2020--8-16
 增加例子
-如果安装异步网络模块麻烦，可参考只需requests模块版本
+如果安装异步网络模块麻烦，可参考python2简单版本只需requests模块
 参考：https://blog.csdn.net/haha1fan/article/details/104464221
 
 ****
